@@ -1,0 +1,81 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.active {
+      .nav-icon {
+        background-color: #ff6b35;
+      }
+
+      .nav-label {
+        color: #ff6b35;
+        font-weight: 600;
+      }
+    }
+
+    .nav-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        font-size: 14px;
+      }
+
+      &.home-icon::before {
+        content: "🏠";
+      }
+
+      &.search-icon::before {
+        content: "🔍";
+      }
+
+      &.notification-icon::before {
+        content: "🔔";
+      }
+
+      &.profile-icon::before {
+        content: "👤";
+      }
+    }
+
+    .nav-label {
+      font-size: 12px;
+      color: #666;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+
+      .nav-icon {
+        background-color: #ff6b35;
+      }
+
+      .nav-label {
+        color: #ff6b35;
+      }
+    }
+  }
+}

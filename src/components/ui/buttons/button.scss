@@ -1,0 +1,30 @@
+.download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.orange {
+    background: linear-gradient(to right, #ff7c00, #fcb034);
+  }
+
+  &.blue {
+    background: linear-gradient(to right, #1d4ed8, #2563eb);
+  }
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  &:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+}
