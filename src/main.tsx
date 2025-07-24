@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './pages/App.tsx'
+import './index.scss'
+import LandingPage from './pages/landing_page'
+
+// todo: validate to lock routes
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <LandingPage />
   </StrictMode>,
 )
