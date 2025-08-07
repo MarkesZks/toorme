@@ -1,7 +1,7 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect, useState } from "react";
-import type { Feedback } from "../../models/feedback";
+import type { Feedback } from "../../models/Feedback";
 
 const FeedbackCarousel = () => {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
@@ -39,14 +39,14 @@ const FeedbackCarousel = () => {
               id: 2,
               name: "David L.",
               text: "I found the perfect guide for my hiking adventure.",
-              image: "/david.jpg",
+              image: "/public/imagem.png",
               rating: 5,
             },
             {
               id: 3,
               name: "Luana R.",
               text: "Amazing service! The app helped me discover hidden gems.",
-              image: "/luana.jpg",
+              image: "/public/imagem.png",
               rating: 4,
             },
           ]);
