@@ -16,9 +16,9 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 CREATE TABLE Users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
-    password TEXT NOT NULL,
-    full_name VARCHAR(100),
-    email VARCHAR(100) UNIQUE,
+    password VARCHAR(200) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
     phone_number VARCHAR(15),
     role VARCHAR(20) CHECK (role IN ('admin', 'customer', 'driver')) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -102,9 +102,9 @@ CREATE TABLE Notifications (
 -- Insert Users with hashed passwords
 INSERT INTO Users (username, password, full_name, email, phone_number, role) 
 VALUES 
-('admin1', crypt('securepassword123', gen_salt('bf')), 'Admin One', 'admin1@example.com', '123-456-7890', 'admin'),
-('customer1', crypt('mypassword456', gen_salt('bf')), 'Customer One', 'customer1@example.com', '234-567-8901', 'customer'),
-('driver1', crypt('driverpass789', gen_salt('bf')), 'Driver One', 'driver1@example.com', '345-678-9012', 'driver');
+('admin1', 'securepassword123', 'Admin One', 'admin1@example.com', '123-456-7890', 'admin'),
+('customer1', 'mypassword456', 'Customer One', 'customer1@example.com', '234-567-8901', 'customer'),
+('driver1', 'driverpass789', 'Driver One', 'driver1@example.com', '345-678-9012', 'driver');
 
 -- Insert Vehicles
 INSERT INTO Vehicles (driver_id, vehicle_type, license_plate, capacity) 
