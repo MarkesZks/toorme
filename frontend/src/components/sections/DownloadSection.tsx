@@ -1,5 +1,5 @@
-import phone1 from "../../../phone1.png";
-import phone2 from "../../../phone2.png";
+import phone1 from "../../../public/phone1.png";
+import phone2 from "../../../public/phone2.png";
 import DownloadButton from "../../components/ui/buttons/button";
 
 

@@ -1,4 +1,4 @@
-import banner from "../../../logo_banner.png";
+import banner from "../../../public/logo_banner.png";
 
 const TravelSection = () => (
   <div className="content-section">
