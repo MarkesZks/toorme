@@ -1,8 +1,13 @@
 -- Create the travel planning database
-CREATE DATABASE toorme;
+DO
+$$
+BEGIN
+   IF NOT EXISTS (SELECT FROM pg_database WHERE datname = 'toorme') THEN
+      CREATE DATABASE toorme;
+   END IF;
+END
+$$;
 
--- Switch to the TravelPlanner database
-USE toorme;
 
 -- Enable pgcrypto extension for password hashing
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
