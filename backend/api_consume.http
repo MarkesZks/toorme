@@ -1,0 +1,41 @@
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+### Ping
+GET {{baseUrl}}/ping
+
+### Users
+### Listar todos os usuários
+GET {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+### Buscar usuário por ID
+GET {{baseUrl}}/users/3
+Content-Type: {{contentType}}
+
+### Criar um novo usuário
+POST {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+{
+  "username": "teste 01",
+  "password": "senha-teste-01",
+  "full_name": "Teste com meu nome completo",
+  "email": "teste01@exemplo.com",
+  "phone_number": "11999999999",
+  "role": "admin"
+}
+
+### Atualizar um usuário
+PATCH {{baseUrl}}/users/1
+Content-Type: {{contentType}}
+
+{
+  "email": "email.atualizado@teste.com",
+  "phone_number": "11988887777",
+  "password": "admin-01"
+}
+
+### Deletar um usuário
+DELETE {{baseUrl}}/users/4
+Content-Type: {{contentType}}
