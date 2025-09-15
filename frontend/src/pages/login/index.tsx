@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./style.scss";
 
 const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <div className="login-container">
@@ -31,7 +34,9 @@ const LoginPage: React.FC = () => {
           </span>
         </div>
 
-        <a className="forgot-password" href="#">Esqueceu a senha?</a>
+        <a className="forgot-password" href="#">
+          Esqueceu a senha?
+        </a>
 
         <div className="divider">
           <hr />
@@ -39,13 +44,16 @@ const LoginPage: React.FC = () => {
           <hr />
         </div>
 
-        <button className="social-button google">
+        <button
+          type="button"
+          className="social-button google"
+          onClick={() => navigate("/homehero")}
+        >
           <span className="icon">🌐</span>
           Continuar com Google
         </button>
         <button className="social-button apple">
-          <span className="icon">🍎</span>
-          Continuar com Apple
+          <span className="icon">🍎 Continuar com Apple</span>
         </button>
         <button className="social-button phone">
           <span className="icon">📱</span>
