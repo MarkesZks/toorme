@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import "./style.scss";
 
-const CadastroPage: React.FC = () => {
+const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="cadastro-container">
+    <div className="login-container">
       <h1>
         Bem-vindo ao <span className="highlight">ToorMe</span>
       </h1>
       <p className="subtitle">Vamos embarcar nessa viagem!</p>
 
-      <form className="cadastro-form">
+      <form className="login-form">
         <div className="input-group">
           <span className="icon">📧</span>
           <input type="email" placeholder="Digite seu e-mail..." />
@@ -56,4 +56,4 @@ const CadastroPage: React.FC = () => {
   );
 };
 
-export default CadastroPage;
+export default LoginPage;

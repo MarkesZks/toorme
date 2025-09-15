@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
 const navigate = useNavigate();
 
   const handleClick = () => {
-   navigate("/cadastro");
+   navigate("/login");
   };
 
   return (
